@@ -8,6 +8,7 @@ const Seller = require("../models/Seller")
 const checkadminlogin = async (request, response) => {
   try {
     const input = request.body
+    console.log(input)
     const admin = await Admin.findOne(input);
     response.json(admin);
   } catch (error) {
